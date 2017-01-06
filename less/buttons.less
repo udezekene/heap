@@ -1,0 +1,105 @@
+/*
+  Buttons
+  Helper classes that will help us get more done with resusable code
+
+ */
+
+// .button (@border-color:rgba(255,255,255,0.2), @background:transparent){
+//   display: inline-block;
+//   border: 1px solid @border-color;
+//   position: relative;
+//   color: inherit;
+//   padding: 10px 25px;
+//   font-weight: 600;
+//   color: @grey;
+//   font-size: 16px;
+//   @media @mobile{
+//     padding: 8px 20px;
+//     font-size: 14px;
+//   }
+//   vertical-align: middle;
+//   background: @background;
+//   i{
+//     margin-left: 10px;
+//   }
+// }
+
+.button(@color:#fff, @background:transparent, @font-size:12px){
+  position: relative;
+  color: @color;
+  display: inline-block;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 1);
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: @font-size;
+  background: @background;
+  letter-spacing: 1.12px;
+  border-radius: 2px;
+  padding: 12px 25px;
+  overflow: hidden;
+
+  i{
+    margin-left: 10px;
+  }
+}
+
+// Block Button Animation (Left to Right)
+
+
+.left-to-right(@color:@yellow){
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-property: color;
+  transition-duration: 450ms;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: @color;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 450ms;
+    transition-duration: 450ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    
+  }
+  &:hover{
+    color: @white;
+    border-color: @color;
+    &:before{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  &:focus{
+    color: @white;
+    border-color: @color;
+    &:before{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  &:active{
+    color: @white;
+    border-color: @color;
+    &:before{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+}

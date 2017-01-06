@@ -1,0 +1,209 @@
+/* VARIABLES & CONSTANTS */
+
+//Set Colors
+@color-blue:#125688;
+@white:#ffffff;
+@grey: #A8A8A8;
+@dark:#141414;
+@red:#CF1E1F;
+
+
+//Convert Pixels to EM
+@base:16px;
+
+.em(@px:@base){
+	@em: ((@px/ @base) + 0em);
+}
+
+
+/* SETTINGS
+	
+	 Well I guess the things here can be changed to affect the layout.
+
+ */
+
+@basline-font-size:16px; // This means 1em == 16px;
+@main-color:@color-blue; //You can change this to any other color from @color- options
+
+@radius: 0.25em; // 16px/4 = 0.25em
+@border-color:@dark;
+@border-color-selected:;
+
+
+/* HEAP
+	 To be dramatic, let's just say this is where the magic happens.
+ */
+
+
+
+.single-form-item{
+	position: relative;
+	font-size: @basline-font-size;
+	margin-bottom: 1em;
+	
+	label{
+		color: @grey;
+		font-size: .75em;
+		font-weight: 600;
+		text-transform: uppercase;
+		.transition;
+	}
+
+	>div{
+		position: relative;
+		.helper-text{
+			font-size: 12px;
+			border: 1px solid;
+			margin: 0;padding: 0;
+			display: none;
+		}
+
+		
+
+		&.input{
+
+			label{
+				width: 100%;
+				color: @grey;
+				padding: 0 15px;
+				position: absolute;
+				left: 0;
+				top: 0.625em;
+			}	
+		}
+		
+		input[type="text"],
+		input[type="number"],
+		input[type="email"],
+		input[type="password"]{
+			border: 1px solid rgba(0, 0,0,.1);
+			padding: 30px 10px 10px 15px;
+			font-size: 1em;
+			border-radius: @radius;
+			.transition;
+			position: relative;
+			background: transparent;
+			z-index: 1;
+			
+			&:required{
+				+ label{
+					&:after{
+						content: "*";
+						display: inline-block;
+						margin-left: 5px;
+						color: @grey;
+					}
+				}
+			}
+			
+
+			&.full{
+				width: 50%;
+			}
+			
+			&:focus{
+				background: fade(@main-color,12%);
+				border-color: @main-color;
+				
+				&:required{
+					+ label{
+						&:after{
+							color: @red;
+						}
+					}
+					
+				}
+				+ label{
+					color: @main-color;
+				}
+			}
+			
+
+		}
+
+		&.controls{
+			display: inline-block;
+			margin-right: 0.625em;
+			position: relative;
+
+			// .indicator{
+			// 	width:  1rem;	
+			// 	height: 1rem;
+  	// 		line-height: 1rem;
+			// }
+			input[type="checkbox"],input[type="radio"] {
+				display: none;
+				
+				+ label{
+					padding-left: 2.5em;
+					position: relative;
+					display: inline-block;
+
+					&:before{
+						content: "";
+						left: 0;
+						top: 50%;
+						margin-top: -1em;
+						position: absolute;
+						border: 2px solid fade(grey,50%);
+						width: 2em;
+						height: 2em;
+						border-radius: 50%;
+						cursor: pointer;
+					}
+					&:after{
+						content: "";
+						left: 5px;
+						top: 50%;
+						margin-top: -0.5625em;
+						position: absolute;
+						width: 1.125em;
+						height: 1.125em;
+						border-radius: 50%;
+						border:3px solid inherit;
+						cursor: pointer;
+					}
+				}
+				&:checked{
+					+ label{
+						color: @main-color;
+						&:before{
+							border-color: @main-color;
+						}
+						&:after{
+							background: @main-color;
+						}
+					}
+				}
+			}
+
+			input[type="checkbox"]{
+				+ label{
+					&:before{
+						border-radius: 5px;
+					}
+					&:after{
+						border-radius: 2px;
+
+					}
+					
+				}
+				
+			}
+		}
+
+	}
+}
+
+
+// Unused Modules
+
+
+//Hack 1. We style the placeholder to look like the label
+// &::-webkit-input-placeholder{
+// 	color: @grey;
+// 	.em(12px);
+// 	font-size: @em;
+// 	text-transform: uppercase;
+// 	font-weight: 600;
+// }

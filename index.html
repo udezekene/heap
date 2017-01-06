@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Heap | Form templating for </title>
+        <!-- Font Awesome CDN via https://fontawesomecdn.com/ -->
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+        
+        <!-- Bootstrap's Grid System -->
+        <link rel="stylesheet" href="css/bootstrap-grid.css">
+        
+        <!-- Code Highligher -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+        <!-- The main style sheet. Where the (allow us to say) magic happens -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+              <h1>This is heap</h1>
+              <p>A simple form system. <br>Built only on CSS. Has No Dependencies</p>
+              </div>    
+            </div>
+          </div>
+        </header>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="outcome">
+                  <div class="single-form-item">
+                    <div class="required input">
+                      <input type="text" id="firstname"  required class="full">
+                      <label for="firstname">First Name</label>  
+                    </div>
+                  </div>  
+
+                  <div class="single-form-item">
+                    <div class="required input">
+                      <input type="text" id="phone" class="full">
+                      <label for="phone">Phone Number</label>  
+                    </div>
+                  </div> 
+
+                  <div class="single-form-item">
+                    <div class="input">
+                      
+                      <input type="email" id="" required class="full">
+                      <label for="">E-mail Address</label>  
+                      <span class="helper-text">Please enter your full e-mail address</span>
+                    </div>
+                  </div> 
+
+                  <div class="single-form-item password">
+                    <div class="password input">
+                      <input type="password" id="" class="full">
+                      <label for="">Password</label>  
+                    </div>
+                  </div> 
+
+                  <div class="single-form-item">
+                    <div class="radio controls">
+                      <input type="radio" name="swallow" id="swallow">
+                      
+                      <label for="swallow">Fufu/Eba
+                        <span class="indicator"></span>
+                      </label>  
+                    </div>
+                    <div class="radio controls">
+                      <input type="radio" name="swallow" id="swallow2">
+                      <label for="swallow2">Amala</label>  
+                    </div>
+                    <div class="wrap checkbox controls">
+                      <input id="soup-gbegiri" type="checkbox">
+                      <label for="soup-gbegiri">Gbegiri</label>  
+                    </div>
+                    <div class="wrap checkbox controls">
+                      <input id="soup-ewedu" type="checkbox">
+                      
+                      <label for="soup-ewedu">Ewedu
+                        <span class="indicator"></span>
+                      </label>  
+                    </div>
+
+                  </div> 
+
+                </div>
+
+                <!-- <div class="codebase">
+                    <xmp>
+                      <div class="single-form-item">
+                        <div class="wrap">
+                          <label for="">First Name</label>  
+                          <input type="text" id="">
+                        </div>
+                      </div>
+                    </xmp>
+                </div> -->
+                
+              </div>
+
+              <div class="col-sm-5">
+                <div class="explain">
+                  <h3>Text Box</h3>
+                  <p>Works for text boxes</p>
+                </div>
+
+                <form lpformnum="1" _lpchecked="1">
+                <div class="field">
+                  <input type="text" required="" ><label>First Name</label>
+                </div>  <div class="field">
+                  <input type="text" pattern=".+" ><label>Last Name</label>
+                </div>
+              </form>
+              </div>
+
+              <div class="clearfix"></div>
+
+
+            </div>
+          </div>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/highlight.pack.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
