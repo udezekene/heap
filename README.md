@@ -9,17 +9,18 @@ Errm, I'll just leave you to figure it out.
 ####[Version]
 0.0.1
 
-
+###[Compatibility]
+- Hasn't been extensively tested in Firefox & IE
 
 ###[New]
 - Well, EVERYTHING
 
 
 ###[Changed/Fixed]
-- I'm not tired of writing: EVERYTHING
+- Well, nothing yet. 
 
 ###[Removed]
-- Everything
+- Nothing Yet
 
 ###[Unreleased]
 - You can make suggestions as how to make this better, or better yet, fork it! 😆

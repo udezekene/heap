@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <title>Heap | Form templating for </title>
+        <title>Heap.css | A simple form system. Built only on CSS, ZERO dependencies. </title>
         <!-- Font Awesome CDN via https://fontawesomecdn.com/ -->
         <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
         
@@ -23,7 +23,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-              <h1>This is heap</h1>
+              <h1>This is Heap.css</h1>
               <p>A simple form system. <br>Built only on CSS. Has No Dependencies</p>
               </div>    
             </div>
@@ -36,41 +36,39 @@
                 <div class="outcome">
                   <div class="single-form-item">
                     <div class="required input">
-                      <input type="text" id="firstname"  required class="full">
+                      <input type="text" id="firstname"  required>
                       <label for="firstname">First Name</label>  
                     </div>
                   </div>  
 
                   <div class="single-form-item">
                     <div class="required input">
-                      <input type="text" id="phone" class="full">
+                      <input type="text" id="phone">
                       <label for="phone">Phone Number</label>  
                     </div>
                   </div> 
 
                   <div class="single-form-item">
                     <div class="input">
-                      
-                      <input type="email" id="" required class="full">
+                      <input type="email" id="" required>
                       <label for="">E-mail Address</label>  
-                      <span class="helper-text">Please enter your full e-mail address</span>
                     </div>
+                    <span class="helper-text">Please enter your full e-mail address</span>
                   </div> 
 
                   <div class="single-form-item password">
                     <div class="password input">
-                      <input type="password" id="" class="full">
+                      <input type="password" id="">
                       <label for="">Password</label>  
                     </div>
                   </div> 
-
-                  <div class="single-form-item">
+                  
+                  <div class="form-item-question">What do you want to eat?</div>
+                  <div class="single-form-item controls-group">
+                    
                     <div class="radio controls">
                       <input type="radio" name="swallow" id="swallow">
-                      
-                      <label for="swallow">Fufu/Eba
-                        <span class="indicator"></span>
-                      </label>  
+                      <label for="swallow">Fufu/Eba</label>  
                     </div>
                     <div class="radio controls">
                       <input type="radio" name="swallow" id="swallow2">
@@ -88,6 +86,25 @@
                       </label>  
                     </div>
 
+                  </div> 
+
+                  <div class="single-form-item select">
+                    <div>
+                      <select aria-label="Select menu example">
+                        <option selected>Select your pickup location</option>
+                        <option value="ikeja">Ikeja</option>
+                        <option value="yaba">Yaba</option>
+                        <option value="Lekki">Lekki Phase 1</option>
+                      </select>
+                    </div>
+                    <div>
+                      <select aria-label="Select menu example">
+                        <option selected>Select your pickup location</option>
+                        <option value="ikeja">Ikeja</option>
+                        <option value="yaba">Yaba</option>
+                        <option value="Lekki">Lekki Phase 1</option>
+                      </select>
+                    </div>
                   </div> 
 
                 </div>
